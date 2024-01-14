@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is the magic number?: ");
-        int magicNumber = int.Parse(Console.ReadLine());
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
 
         //Add a loop that keeps looping as long as the guess does not match the magic number.
         int guess = -1;
