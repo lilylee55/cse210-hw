@@ -39,6 +39,25 @@ class Program
             }
         }
         Console.WriteLine($"The largest number is: {max}");
+
+        //Have the user enter both positive and negative numbers, then find the smallest positive number (the positive number that is closest to zero).
+        int smallestPositive = numbers[0];
+        foreach (int num in numbers)
+        {
+            if (num > 0 && num < smallestPositive)
+            {
+                smallestPositive = num;
+            }
+        }
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}");
+
+        //Sort the numbers in the list and display the new, sorted list.
+        numbers.Sort();
+        Console.WriteLine("The sorted list is:");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
         
     }
 }
